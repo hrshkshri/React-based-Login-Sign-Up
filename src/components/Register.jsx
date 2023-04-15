@@ -1,21 +1,22 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
+import "../style.css";
 
 function Register(props) {
   return (
-    <div>
+    <div className="register">
       {props.isRegister ? (
         <h2>Sign in to your account</h2>
       ) : (
         <h2>Create an account</h2>
       )}
-      <from>
+      <form>
         <input type="text" placeholder="Enter your email" />
-        <input type="text" placeholder="Password" />
+        <input type="password" placeholder="Password" />
         {props.isRegister ? (
           true
         ) : (
-          <input type="text" placeholder="Confirm Password" />
+          <input type="password" placeholder="Confirm Password" />
         )}
         <button type="submit">{props.isRegister ? "Login" : "Sign Up"}</button>
         {props.isRegister ? (
@@ -31,10 +32,10 @@ function Register(props) {
           false
         ) : (
           <p>
-            Not a member ? <a>Sign Up</a>
+            Not a member? <a href="#">Sign Up</a>
           </p>
         )}
-      </from>
+      </form>
     </div>
   );
 }

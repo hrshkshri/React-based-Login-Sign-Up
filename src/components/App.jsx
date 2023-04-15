@@ -1,14 +1,15 @@
-import React from 'react';
-import { ReactDOM } from 'react';
-import Register from './Register';
+import React from "react";
+import ReactDOM from "react-dom";
+import Register from "./Register";
 
-let userIsRegister=false;
+let userIsRegister = true;
 
 function App() {
-    return( <div>
-    <Register isRegister={userIsRegister} />
-    </div> )
+  return (
+    <div>
+      <Register userIsRegister={userIsRegister} />
+    </div>
+  );
 }
-
 
 export default App;
